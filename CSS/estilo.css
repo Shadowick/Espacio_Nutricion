@@ -13,7 +13,7 @@ footer {
 }
 header, footer, body {
     display: flex;
-    background-color: rgb(172, 194, 85);
+    background-image: linear-gradient(to left,rgb(68, 241, 0),rgb(172, 194, 85));
 }
 footer div {
     display: inline-block;
@@ -90,7 +90,21 @@ main{grid-area: main;}
 .encabezado{grid-area: encabezado;}
 .imgNosotros{grid-area: imgNosotros;}
 .txtNosotros{grid-area: txtNosotros;}
-.imgNosotros img{width: 100%;}
+.imgNosotros img{
+    width: 100%;
+    animation-name: inicial;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+@keyframes inicial {
+    0%{transform: translateX(100px);}
+    25%{transform: translateY(100px);}
+    50%{transform: rotate(360deg);}
+    75%{transform: translate(100px, 100px);}
+    100%{transform: scale(1,1);}
+}
 
 @media only screen and (max-width: 768px){
 	header,main,footer{flex-direction: column;}
