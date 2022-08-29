@@ -1,32 +1,41 @@
+body{
+    overflow-x: hidden;
+}
 header {
     grid-area: header;
     padding: 20px 0;
     position: relative;
-    background-color: rgb(172, 194, 85);
 }
 footer {
     grid-area: footer;
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(172, 194, 85);
 }
-header, footer {
+header, footer, body {
     display: flex;
+    background-color: rgb(172, 194, 85);
 }
 footer div {
     display: inline-block;
     width: fit-content;    
 }
+li {
+    padding: 10px;
+}
 header nav ul {
-    display: flex;
+   display: flex;
    flex-direction: row;
-    list-style-type: none;
+   list-style-type: none;
    font-size: 12pt;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+nav ul li a {
+    text-decoration: none;
+    color: darkorange;
+}
 .imgFooter {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 .imgHeader {
     width: 150px;
@@ -37,14 +46,11 @@ main ol {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.bgColorMain {
-    background-color: rgb(172, 194, 85);
-}
 .letrasMain {
     list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: large;
+    font-size: normal;
 }
 main form {
     margin: 10px 10px 10px 10px;
@@ -68,7 +74,6 @@ main{grid-area: main;}
 }
 .imgPortada img{width: 100%;}
 .gridNosotros{
-    background-color: rgb(172, 194, 85);
 	display: grid;
 	grid-template-areas: 
 	"encabezado encabezado"
@@ -82,7 +87,6 @@ main{grid-area: main;}
 .imgNosotros img{width: 100%;}
 
 @media only screen and (max-width: 768px){
-	body .gridHome{background-color: rgb(172, 194, 85);}
 	header,main,footer{flex-direction: column;}
     li{padding: 5px;}
     .gridNosotros{
