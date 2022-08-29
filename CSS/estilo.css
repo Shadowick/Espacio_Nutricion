@@ -20,6 +20,7 @@ footer div {
     width: fit-content;    
 }
 li {
+    width: 200px;
     padding: 10px;
 }
 header nav ul {
@@ -71,6 +72,11 @@ main{grid-area: main;}
 .imgNutri{
     width: 200px;
     height: 200px;
+    transition: height 1s, width 1s;
+}
+.imgNutri:hover {
+    height: 300px;
+    width: 300px;
 }
 .imgPortada img{width: 100%;}
 .gridNosotros{
@@ -88,7 +94,10 @@ main{grid-area: main;}
 
 @media only screen and (max-width: 768px){
 	header,main,footer{flex-direction: column;}
-    li{padding: 5px;}
+    li{
+        width: auto;
+        padding: 5px;
+        }
     .gridNosotros{
         display: flex;
         flex-direction: column;
